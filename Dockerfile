@@ -4,9 +4,10 @@ LABEL maintainer="melsonlai"
 
 COPY qemu-arm-static /usr/bin/
 
-RUN apk add --no-cache fuse
+RUN apk add --no-cache bash fuse unzip curl
 
-COPY rclone /usr/bin/rclone
-RUN chmod +x /usr/bin/rclone
+RUN curl https://rclone.org/install.sh | bash
+
+RUN apk del bash unzip curl
 
 ENTRYPOINT [ "/usr/bin/rclone" ]
