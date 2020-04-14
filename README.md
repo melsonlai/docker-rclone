@@ -6,4 +6,5 @@ This is simply a rclone binary (hope it's the lastest) (`/usr/bin/rclone`) in a 
 
 ## Tags
 
+- `amd64`: arm arch based on `alpine:latest`
 - `arm`: arm arch based on `arm32v6/alpine:latest`
