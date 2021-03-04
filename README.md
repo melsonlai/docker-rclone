@@ -8,3 +8,8 @@ This is simply a rclone binary (hope it's the lastest) (`/usr/bin/rclone`) in a 
 
 - `amd64`: arm arch based on `alpine:latest`
 - `arm`: arm arch based on `arm32v6/alpine:latest`
+
+## Changelog
+
+- 20210304: Rebase onto the official `rclone/rclone` image
+
