@@ -1,11 +1,8 @@
-FROM arm32v6/alpine:latest
+FROM --platform=linux/arm/v7 rclone/rclone:latest
 
 LABEL maintainer="melsonlai"
 
 COPY qemu-arm-static /usr/bin/
 
-RUN apk add --no-cache bash fuse unzip curl
+RUN apk add --no-cache fuse
 
-RUN curl https://rclone.org/install.sh | bash
-
-ENTRYPOINT [ "/usr/bin/rclone" ]
