@@ -1,9 +1,6 @@
-FROM alpine:latest
+FROM --platform=linux/amd64 rclone/rclone:latest
 
 LABEL maintainer="melsonlai"
 
-RUN apk add --no-cache bash fuse unzip curl
+RUN apk add --no-cache fuse
 
-RUN curl https://rclone.org/install.sh | bash
-
-ENTRYPOINT [ "/usr/bin/rclone" ]
